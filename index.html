@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Formulário de cadastro</title>
+      <link rel="stylesheet" href="/assent/styles/styles.css">
+</head>
+<body>
+      <main class="principal">
+           <section class="formulario">
+                  <div class="voltar">
+                        <a href="index.html"><img src="/img/setinha.png" >Voltar</a>
+                  </div>
+                  <h1 class="titulo">Formulário de inscrição</h1>
+                  <p class="paragrafo">Insira os dados necessários abaixo para realizar sua inscrição no Projeto Trilhas</p>
+
+                  <form action="/action_page.php" method="post">
+                        <div class="primeiro-bloco">
+                              <p class="primeiro-bloco-texto"><strong>Informações do participante</strong></p>
+                        <div>
+                              <label for="nome">Nome completo</label><br>
+                              <input type="text" name="nome">
+                        </div>
+
+                        <div>
+                              <label for="data">Data de nascimento</label><br>
+                              <input type="date" name="data">
+                        </div>
+
+                        <div>
+                              <label for="cpf">CPF</label><br>
+                              <input type="text" name="cpf">
+                        </div>
+
+                        <div>
+                              <label for="sexo">Sexo</label><br>
+                              <select name="sexo" >
+                                    <option class="option" value="Masculino">Masculino</option>
+                                    <option class="option" value="Feminino">Feminino</option>
+                              </select>
+                        </div>
+                        
+                        <div>
+                              <label for="email">E-mail</label><br>
+                              <input type="email" name="email">
+                        </div>
+                        
+                        <div>
+                              <label for="telefone">Telefone</label><br>
+                              <input type="text" name="telefone">
+                        </div>
+
+                        <div>
+                              <p class="identidade">Documentação de identidade</p>
+                              <div class="arquivo-identidade">
+                                    <img src="/img/nuvem.png" width="60px" height="60px">
+                                    <p>Buscar arquivo</p>
+                                    <input type="file" name="identidade">
+                              </div>
+                        </div>
+
+                        </div>
+
+                        <div class="segundo-bloco">
+                              <p class="segundo-bloco-texto">Endereço</p>
+
+                              <div>
+                                    <label for="cep">CEP</label><br>
+                                    <input type="text" name="cep">
+                              </div>
+
+                              <div class="segundo-bloco-outrametade">
+                                    <div>
+                                          <label for="rua">Rua</label><br>
+                                          <input type="text" name="rua">
+                                    </div>
+
+                                    <div>
+                                          <label for="numCasa">Número</label><br>
+                                          <input type="number" name="numCasa" >
+                                    </div>
+
+                                    <div>
+                                          <label for="cidade">Cidade</label><br>
+                                          <input type="text" name="cidade">
+                                    </div>
+
+                                    <div>
+                                          <label for="estado">Estado</label><br>
+                                          <input type="text" name="estado">
+                                    </div>
+                              </div>
+
+                              <div>
+                                    <p class="textoResidencia">Comprovante de residência</p>
+                                    <div class="arquivo-residencia">
+                                          <img src="/img/nuvem.png" width="60px" height="60px">
+                                          <p>Buscar arquivo</p>
+                                          <input type="file" name="residencia">
+                                    </div>
+                              </div>
+                        </div>
+                        <p class="trilhas-aprendizagem">Trilhas de aprendizagem</p>
+                        <p class="trilhas-aprendizagem-selecao">Selecione a sua trilha</p>
+
+                        <div class="terceiro-bloco">
+                              <div class="trilha-front-end">
+                                    <input class="radio" type="radio" name="trilha" checked="checked">
+                                    <img src="/img/front-end.png" alt="imagem do front-end"><br>
+                                    <label for="front-end">Programação Front-end</label>
+                              </div>
+
+                              <div class="trilha-back-end">
+                                    <input class="radio" type="radio" name="trilha">
+                                    <img src="/img/back-end.png" alt="imagem do back-end"><br>
+                                    <label for="back-end">Programação Back-end</label>
+                              </div>
+                              
+                              <div class="trilha-jogos">
+                                    <input class="radio" type="radio" name="trilha">
+                                    <img src="/img/jogos.png" alt="imagem da trilha de jogos"> <br>
+                                    <label for="jogos">Programação de Jogos</label>
+                              </div>
+
+                              <div class="trilha-ux">
+                                    <input class="radio" type="radio" name="trilha">
+                                    <img src="/img/ux.png" alt="imagem da trilha de ux design"><br>
+                                    <label for="design">UX design</label>
+                              </div>
+
+                              <div class="trilha-dados">
+                                    <input class="radio" type="radio" name="trilha">
+                                    <img src="/img/dados.png" alt="imagem da trilha de ciencia de dados"><br>
+                                    <label for="dados">Ciência de dados</label>
+                              </div>
+
+                        </div>
+
+                        <br>
+
+                        <div class="termos">
+                              <input class="checkbox" type="checkbox" name="termos" required>
+                              <label for="termos">
+                              Declaro que li e concordo com os <a href=""><strong>Termos e Condições</strong></a> e com a <a href=""><strong>Política de Privacidade.</strong></a>
+                              </label>
+                        </div>
+
+                        <div class="botao">
+                              <input class="cancelar" type="reset" value="Cancelar">
+                              <input class="fazer-inscricao" type="submit" value="fazer-inscricao">
+                        </div>
+
+                  </form>
+           </section>
+
+           <section>
+                  <div class="imagensLayout">
+                        <img class="imagensLayoutUm" src="/img/Ilustration.png" alt="imagem da ilustração">
+                        <img class="imagensLayoutDois" src="/img/logo-trilhas-inova.png" alt="logo">
+                  </div>
+           </section>
+      </main>
+</body>
+
+</html>

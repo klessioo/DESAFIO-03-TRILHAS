@@ -1,0 +1,319 @@
+/* Estilos Gerais */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+      background-color: #2135a6;
+  }
+  
+  .principal {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      gap: 4rem;
+  }
+  
+  /* Seção do Formulário */
+  .formulario {
+      flex: 1;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  }
+  
+  .voltar {
+      margin-bottom: 1.5rem;
+  }
+  
+  .voltar a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: #2d3436;
+      font-weight: 500;
+  }
+  
+  .voltar img {
+      width: 20px;
+      height: 20px;
+  }
+  
+  .titulo {
+      color: #2d3436;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+  }
+  
+  .paragrafo {
+      color: #636e72;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+  }
+  
+  /* Blocos do Formulário */
+  .primeiro-bloco,
+  .segundo-bloco {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 1px solid #dfe6e9;
+      border-radius: 8px;
+  }
+  
+  .primeiro-bloco-texto,
+  .segundo-bloco-texto,
+  .trilhas-aprendizagem {
+      color: #2d3436;
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+  }
+  
+  /* Campos do Formulário */
+  label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #2d3436;
+      font-weight: 500;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #b2bec3;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+  }
+  
+  input:focus,
+  select:focus {
+      outline: none;
+      border-color: #6c5ce7;
+      box-shadow: 0 0 0 2px rgba(108,92,231,0.2);
+  }
+  
+  /* Upload de Arquivos */
+  .identidade,
+  .textoResidencia {
+      margin: 1rem 0;
+      color: #2d3436;
+      font-weight: 500;
+  }
+  
+  .arquivo-identidade,
+  .arquivo-residencia {
+      position: relative;
+      border: 2px dashed #b2bec3;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+  }
+  
+  .arquivo-identidade:hover,
+  .arquivo-residencia:hover {
+      border-color: #6c5ce7;
+  }
+  
+  .arquivo-identidade img,
+  .arquivo-residencia img {
+      margin-bottom: 0.5rem;
+  }
+  
+  .arquivo-identidade p,
+  .arquivo-residencia p {
+      color: #636e72;
+  }
+  
+  input[type="file"] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+  }
+  
+  /* Trilhas de Aprendizagem */
+  .trilhas-aprendizagem-selecao {
+      color: #636e72;
+      margin-bottom: 1.5rem;
+  }
+  
+  .terceiro-bloco {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+  }
+  
+  .trilha-front-end,
+  .trilha-back-end,
+  .trilha-jogos,
+  .trilha-ux,
+  .trilha-dados {
+      text-align: center;
+      padding: 1rem;
+      border: 1px solid #dfe6e9;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+  
+  .trilha-front-end:hover,
+  .trilha-back-end:hover,
+  .trilha-jogos:hover,
+  .trilha-ux:hover,
+  .trilha-dados:hover {
+      border-color: #6c5ce7;
+      transform: translateY(-2px);
+  }
+  
+  .radio {
+      margin-bottom: 0.5rem;
+  }
+  
+  .trilha-front-end img,
+  .trilha-back-end img,
+  .trilha-jogos img,
+  .trilha-ux img,
+  .trilha-dados img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+  }
+  
+  /* Termos e Condições */
+  .termos {
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+  
+  .termos label {
+      margin: 0;
+      color: #2d3436;
+  }
+  
+  .termos a {
+      color: #6c5ce7;
+      text-decoration: none;
+  }
+  
+  .termos a:hover {
+      text-decoration: underline;
+  }
+  
+  /* Botões */
+  .botao {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+  }
+  
+  .cancelar,
+  .fazer-inscricao {
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+  
+  .cancelar {
+      background-color: #dfe6e9;
+      color: #2d3436;
+  }
+  
+  .cancelar:hover {
+      background-color: #b2bec3;
+  }
+  
+  .fazer-inscricao {
+      background-color: #6c5ce7;
+      color: white;
+      text-transform: uppercase;
+  }
+  
+  .fazer-inscricao:hover {
+      background-color: #5b4bc4;
+      transform: translateY(-1px);
+  }
+  
+  /* Seção de Imagens */
+  .imagensLayout {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      position: sticky;
+      top: 2rem;
+  }
+  
+  .imagensLayoutUm {
+      max-width: 400px;
+  }
+  
+  .imagensLayoutDois {
+      max-width: 250px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+      .principal {
+          flex-direction: column;
+          padding: 1rem;
+      }
+  
+      .imagensLayout {
+          flex-direction: row;
+          justify-content: center;
+          margin-top: 2rem;
+      }
+  
+      .imagensLayoutUm {
+          display: none;
+      }
+  
+      .terceiro-bloco {
+          grid-template-columns: 1fr 1fr;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .formulario {
+          padding: 1rem;
+      }
+  
+      .terceiro-bloco {
+          grid-template-columns: 1fr;
+      }
+  
+      .botao {
+          flex-direction: column;
+      }
+  
+      .cancelar,
+      .fazer-inscricao {
+          width: 100%;
+          text-align: center;
+      }
+  }
