@@ -274,6 +274,14 @@ input[type="file"] {
     transform: translateY(-1px);
 }
 
+.dadosLogin input{
+    width: 520px !important;
+    margin-bottom: 16px; 
+    padding: 12px;
+    border: 1px solid var(--cor-destaque);
+    border-radius: 8px;
+}
+
 /* Seção de Imagens */
 .imagensLayout {
     display: flex;
