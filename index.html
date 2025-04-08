@@ -16,27 +16,28 @@
                   <h1 class="titulo">Formulário de inscrição</h1>
                   <p class="paragrafo">Insira os dados necessários abaixo para realizar sua inscrição no Projeto Trilhas</p>
 
-                  <form action="/action_page.php" method="post">
+                  <form id="form" action="" method="post">
+
                         <div class="primeiro-bloco">
                               <p class="primeiro-bloco-texto"><strong>Informações do participante</strong></p>
                         <div>
                               <label for="nome">Nome completo</label><br>
-                              <input type="text" name="nome">
+                              <input type="text" name="nome" id="nome">
                         </div>
 
                         <div>
                               <label for="data">Data de nascimento</label><br>
-                              <input type="date" name="data">
+                              <input type="date" name="data" id="data">
                         </div>
 
                         <div>
                               <label for="cpf">CPF</label><br>
-                              <input type="text" name="cpf">
+                              <input type="text" name="cpf" id="cpf">
                         </div>
 
                         <div>
                               <label for="sexo">Sexo</label><br>
-                              <select name="sexo" >
+                              <select name="sexo" id="sexo">
                                     <option class="option" value="Masculino">Masculino</option>
                                     <option class="option" value="Feminino">Feminino</option>
                               </select>
@@ -44,12 +45,12 @@
                         
                         <div>
                               <label for="email">E-mail</label><br>
-                              <input type="email" name="email">
+                              <input type="email" name="email" id="email">
                         </div>
                         
                         <div>
                               <label for="telefone">Telefone</label><br>
-                              <input type="text" name="telefone">
+                              <input type="text" name="telefone" id="telefone">
                         </div>
 
                         <div>
@@ -57,7 +58,7 @@
                               <div class="arquivo-identidade">
                                     <img src="/assent/IMG/nuvem.png" width="60px" height="60px">
                                     <p>Buscar arquivo</p>
-                                    <input type="file" name="identidade">
+                                    <input type="file" name="identidade" id="identidade">
                               </div>
                         </div>
 
@@ -68,28 +69,28 @@
 
                               <div>
                                     <label for="cep">CEP</label><br>
-                                    <input type="text" name="cep">
+                                    <input type="text" name="cep" id="cep">
                               </div>
 
                               <div class="segundo-bloco-outrametade">
                                     <div>
                                           <label for="rua">Rua</label><br>
-                                          <input type="text" name="rua">
+                                          <input type="text" name="rua" id="rua">
                                     </div>
 
                                     <div>
                                           <label for="numCasa">Número</label><br>
-                                          <input type="number" name="numCasa" >
+                                          <input type="number" name="numCasa" id="numCasa">
                                     </div>
 
                                     <div>
                                           <label for="cidade">Cidade</label><br>
-                                          <input type="text" name="cidade">
+                                          <input type="text" name="cidade" id="cidade">
                                     </div>
 
                                     <div>
                                           <label for="estado">Estado</label><br>
-                                          <input type="text" name="estado">
+                                          <input type="text" name="estado" id="estado">
                                     </div>
                               </div>
 
@@ -98,7 +99,7 @@
                                     <div class="arquivo-residencia">
                                           <img src="/assent/IMG/nuvem.png" width="60px" height="60px">
                                           <p>Buscar arquivo</p>
-                                          <input type="file" name="residencia">
+                                          <input type="file" name="residencia" id="residencia">
                                     </div>
                               </div>
                         </div>
@@ -140,8 +141,25 @@
 
                         <br>
 
+                        <div class="dadosLogin">
+                              <p class="dadosLogin__senha">Crie uma senha</p>
+                              <label for="senha">Senha</label>
+                              <input type="password" name="senha" id="senha"
+                              pattern="">
+                              <div class="dadosLogin__requisitosSenha">
+                                    <p>Requisitos da senha:</p>
+                                    <ul class="dadosLogin__requisitosSenha__lista">
+                                          <li id="requisitosTamanho">Pelo menos 8(oito) caracteres</li>
+                                          <li id="requisitosMaiusculo">Pelo menos 1(um) caractere maiusculo</li>
+                                          <li id="requisitosMinusculo">Pelo menos 1(um) caractere minusculo</li>
+                                          <li id="requisitosNumeral">Pelo menos 1(um) numeral</li>
+                                          <li id="requisitosCaractere">Pelo menos 1(um) caractere especial (!@#$&)</li>
+                                    </ul>
+                              </div>
+                        </div>
+
                         <div class="termos">
-                              <input class="checkbox" type="checkbox" name="termos" required>
+                              <input class="checkbox" type="checkbox" name="termos" id="termo" required>
                               <label for="termos">
                               Declaro que li e concordo com os <a href=""><strong>Termos e Condições</strong></a> e com a <a href=""><strong>Política de Privacidade.</strong></a>
                               </label>
