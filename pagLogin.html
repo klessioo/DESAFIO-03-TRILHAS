@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login</title>
+      <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body id="pagina__login">
+      <main>
+            <section>
+                  <div class="pagina__login__principal">
+                        <div class="pagina__login__cabecalho">
+                              <h1>Seja bem-vindo ao Programa Trilhas</h1>
+                              <p>Realize o login para acessar a sua conta</p>
+                        </div>
+                  
+
+                        <div class="pagina__login__form">
+                              <div class="pagina__login__form__campo">
+                                    <label id="cpf-label" for="cpf">CPF</label>
+                                    <input type="text" id="cpf" name="cpf" inputmode="numeric">
+                              </div>
+                        
+                              <div class="pagina__login__form__campo">
+                                    <label id="senha-label" for="senha">Senha</label>
+                                    <div class="pagina__login__form__campo__senha">
+                                          <input type="password" id="senha" name="senha">
+                                          <span class="mostrar-senha">🫣</span>
+                                    </div>
+                              </div>
+                        
+                              <button class="pagina__login__form__submit" onclick="entrar()">Entrar</button>
+
+                        </div>
+
+                        <div class="login__footer">
+                              <p>Esqueceu sua senha? <a href="recuperar-senha.html">Recuperar senha</a></p>
+                        </div>
+                  
+                  </div>
+
+            </section>
+      </main>
+      <footer class="pagina__login__rodape">
+            <img src="assent/IMG/logo-trilhas-inova.png" alt="Logo do programa trilhas e da inova maranhão">
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+      <script>
+          $(document).ready(function(){
+              $('#cpf').mask('000.000.000-00');
+          });
+      </script>
+
+      <script src="login.js"></script>
+</body>
+</html>
