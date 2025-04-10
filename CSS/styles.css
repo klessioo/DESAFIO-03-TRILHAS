@@ -2,6 +2,10 @@
 :root {
     --cor-primaria: #2135a6;
     --cor-secundaria: #6c5ce7;
+    --cor-terciaria: #000000;
+    --cor-quaternaria: #E43A12;
+    --cor-quinta: #F67841;
+    --cor-sexta: #D6D3D1;
     --cor-destaque: #2d3436;
     --cor-fundo: #ffffff;
     --cor-borda: #dfe6e9;
@@ -338,5 +342,184 @@ input[type="file"] {
     .fazer-inscricao {
         width: 100%;
         text-align: center;
+    }
+}
+
+
+/*pagina de login*/
+
+#pagina__login{
+    font-family: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-decima);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 48px;
+    background-size: contain;
+    background-position: right center;
+}
+
+.pagina__login__principal{
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    padding: 48px;
+    color: var(--cor-terciaria);
+    z-index: 1;
+}
+
+.pagina__login__cabecalho{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.pagina__login__cabecalho h1{
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: var(--cor-secundaria);
+}
+
+.pagina__login__cabecalho p{
+    color: var(--cor-terciaria);
+}
+
+.pagina__login__form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pagina__login__form__campo{
+    display: flex;
+    flex-direction: column;
+}
+
+.pagina__login__form__campo label{
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.pagina__login__form__campo input{
+    padding: 16px;
+    border: 1px solid var(--cor-terciaria);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.2s ease;
+}
+
+.pagina__login__form__campo input :focus{
+    border: 1px solid var(--cor-quinta) !important;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(246, 120, 65, 0.3);
+}
+
+.pagina__login__form__campo__senha{
+    position: relative;
+}
+
+.pagina__login__form__campo__senha input{
+    width: 270px;
+}
+
+.mostrar-senha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.mostrar-senha:hover {
+    opacity: 1;
+}
+
+.pagina__login__form__submit{
+    width: 100%;
+    background-color: var(--cor-quaternaria);
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: var(--cor-fundo);
+    border: var(--cor-quaternaria);
+    cursor: pointer;
+    margin: 0.50rem auto;
+}
+
+#mensagem-erro{
+    text-align: center;
+    color: var(--cor-quaternaria);
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    display: none;
+}
+
+.login__footer {
+    text-align: center;
+    margin-top: 16px;
+    color: var(--cor-terciaria);
+}
+
+.login__footer a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pagina__login__rodape {
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/*responsividade da tela de login*/
+
+@media (max-width: 768px) {
+    .pagina__login__principal {
+        padding: 32px 24px;
+        max-width: 90%;
+    }
+
+    .pagina__login__form__campo__senha input {
+        width: 100%;
+    }
+
+    .mostrar-senha {
+        right: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina__login__cabecalho h1 {
+        font-size: 1.5rem;
+    }
+
+    .pagina__login__form__campo label {
+        font-size: 0.9rem;
+    }
+
+    .pagina__login__form__submit {
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
+
+    .pagina__login__form__campo input {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    #mensagem-erro {
+        font-size: 0.8rem;
     }
 }
