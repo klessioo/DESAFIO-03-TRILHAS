@@ -69,7 +69,8 @@
 
                               <div>
                                     <label for="cep">CEP</label><br>
-                                    <input type="text" name="cep" id="cep">
+                                    <input type="text" name="cep" id="cep" onblur="buscarCep(this.value)">
+                                    <p class="mensagem-erro" id="erro-cep"></p>
                               </div>
 
                               <div class="segundo-bloco-outrametade">
@@ -108,31 +109,31 @@
 
                         <div class="terceiro-bloco">
                               <div class="trilha-front-end">
-                                    <input class="radio" type="radio" name="trilha" checked="checked">
+                                    <input class="radio" type="radio" name="trilha" checked="checked"  value="Front-end">
                                     <img src="/assent/IMG/front-end.png" alt="imagem do front-end"><br>
                                     <label for="front-end">Programação Front-end</label>
                               </div>
 
                               <div class="trilha-back-end">
-                                    <input class="radio" type="radio" name="trilha">
+                                    <input class="radio" type="radio" name="trilha" value="Back-end">
                                     <img src="/assent/IMG/back-end.png" alt="imagem do back-end"><br>
                                     <label for="back-end">Programação Back-end</label>
                               </div>
                               
                               <div class="trilha-jogos">
-                                    <input class="radio" type="radio" name="trilha">
+                                    <input class="radio" type="radio" name="trilha" value="Programação de jogos">
                                     <img src="/assent/IMG/jogos.png" alt="imagem da trilha de jogos"> <br>
                                     <label for="jogos">Programação de Jogos</label>
                               </div>
 
                               <div class="trilha-ux">
-                                    <input class="radio" type="radio" name="trilha">
+                                    <input class="radio" type="radio" name="trilha" value="UI/UX">
                                     <img src="/assent/IMG/ux.png" alt="imagem da trilha de ux design"><br>
                                     <label for="design">UX design</label>
                               </div>
 
                               <div class="trilha-dados">
-                                    <input class="radio" type="radio" name="trilha">
+                                    <input class="radio" type="radio" name="trilha" value="Ciências de Dados">
                                     <img src="/assent/IMG/dados.png" alt="imagem da trilha de ciencia de dados"><br>
                                     <label for="dados">Ciência de dados</label>
                               </div>
@@ -144,7 +145,7 @@
                         <div class="dadosLogin">
                               <p class="dadosLogin__senha">Crie uma senha</p>
                               <label for="senha">Senha</label>
-                              <input type="password" name="senha" id="loginSenha"
+                              <input type="password" name="senha" id="senhalogin"
                               pattern="">
                               <div class="dadosLogin__requisitosSenha">
                                     <p>Requisitos da senha:</p>
@@ -167,7 +168,8 @@
 
                         <div class="botao">
                               <button class="cancelar" type="reset">Cancelar</button>
-                              <button class="fazer-inscricao" type="button">Salvar</button>
+                              <button class="fazer-inscricao" type="submit">Salvar</button>
+                              <button class="botao-login" type="button" onclick="window.location.href='pagLogin.html'">Página de Login</button>
                         </div>
 
                   </form>

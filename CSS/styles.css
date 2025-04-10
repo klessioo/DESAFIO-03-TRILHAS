@@ -273,6 +273,12 @@ input[type="file"] {
     text-transform: uppercase;
 }
 
+.botao-login {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fundo);
+    text-transform: uppercase;
+}
+
 .fazer-inscricao:hover {
     background-color: #5b4bc4;
     transform: translateY(-1px);
