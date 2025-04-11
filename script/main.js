@@ -17,6 +17,9 @@ const comprovanteResidencia = document.getElementById("residencia");
 const senhalogin = document.getElementById("senhalogin");
 
 let trilhaSelecionada = null;
+const trilhaInicial = document.querySelector('input[name="trilha"]:checked');
+trilhaSelecionada = trilhaInicial ? trilhaInicial.value : null;
+
 
 const campos = [
   nome, data, cpf, email, telefone, cep, 
@@ -28,7 +31,7 @@ campos.forEach(campo => {
   campo.addEventListener('input', function() {
     esconderErro(this.id);
 
-    if (this.id === 'loginSenha') {
+    if (this.id === 'senhalogin') {
       const senha = this.value;
       document.getElementById('requisitosTamanho').style.color = senha.length >= 8 ? 'green' : 'red';
       document.getElementById('requisitosMaiusculo').style.color = /[A-Z]/.test(senha) ? 'green' : 'red';
@@ -138,7 +141,7 @@ function validarCampos() {
     return false;
   }
  
-  if (loginSenha.value === "" || !validarSenha(loginSenha.value)) {
+  if (senhalogin.value === "" || !validarSenha(senhalogin.value)) {
     alert("A senha deve conter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, números e caracteres especiais.");
     return false;
   }
@@ -196,7 +199,7 @@ function salvarDadosUsuario() {
     Cidade: cidade.value,
     Estado: estado.value,
     Trilha: trilhaSelecionada,
-    Senha: loginSenha.value,
+    Senha: senhalogin.value,
     Identidade: localStorage.getItem('pdf1_identidade'),
     Residencia: localStorage.getItem('pdf2_residencia')
   });
@@ -206,7 +209,7 @@ function salvarDadosUsuario() {
 
 // Funções de validação para os campos
 function validarEmail(email) {
-  return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+    return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);  
 }
 
 function validarCPF(cpf) {
@@ -222,12 +225,13 @@ function validarCEP(cep) {
 }
 
 function validarSenha(senha) {
-  return senha.length >= 8 &&
-         /[A-Z]/.test(senha) &&
-         /[a-z]/.test(senha) &&
-         /[0-9]/.test(senha) &&
-         /[!@#$%^&*]/.test(senha);
-}
+    return senha.length >= 8 &&
+           /[A-Z]/.test(senha) &&
+           /[a-z]/.test(senha) &&
+           /[0-9]/.test(senha) &&
+           /[!@#$&*]/.test(senha);
+  }
+  
 
 // Função para buscar dados do CEP via API
 function buscarCep(cep) {

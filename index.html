@@ -167,9 +167,9 @@
                         </div>
 
                         <div class="botao">
+                              <button class="salvar-dados" type="button">Salvar</button>
                               <button class="cancelar" type="reset">Cancelar</button>
-                              <button class="fazer-inscricao" type="submit">Salvar</button>
-                              <button class="botao-login" type="button" onclick="window.location.href='pagLogin.html'">Página de Login</button>
+                              <button class="fazer-inscricao" type="submit">Fazer inscrição</button>
                         </div>
 
                   </form>
@@ -182,7 +182,26 @@
                   </div>
            </section>
       </main>
-      <script src="main.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+      <script>
+          $(document).ready(function(){
+              $('#cpf').mask('000.000.000-00');
+              $('#phone').mask('(00) 00000-0000');
+              $('#cep').mask('00000-000');
+              $('#numero-casa').mask('0000000');
+  
+              $('.cancelar').click(function() {
+                  if(confirm('Tem certeza que deseja cancelar? Todos os dados preenchidos serão perdidos.')) {
+                      window.location.href = 'index.html';
+                  }
+              });
+          });
+      </script>
+  
+
+      <script src="script/main.js"></script>
 </body>
 
 </html>
