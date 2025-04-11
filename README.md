@@ -69,3 +69,21 @@ O **Projeto Trilhas Inova** é uma plataforma de cadastro e capacitação em tec
 - Armazenamento local seguro
 - Recuperação de cadastros incompletos
 - Listagem de usuários cadastrados
+
+### 6. 🤝 Como Contribuir
+Faça um fork do projeto
+
+Crie sua branch (git checkout -b feature/AmazingFeature)
+
+Commit suas mudanças (git commit -m 'Add some AmazingFeature')
+
+Push para a branch (git push origin feature/AmazingFeature)
+
+Abra um Pull Request
+
+
+### ✨ Autores
+@klessioo
+@kauamuniz1
+
+
