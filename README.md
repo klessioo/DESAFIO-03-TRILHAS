@@ -10,31 +10,12 @@ O **Projeto Trilhas Inova** é uma plataforma de cadastro e capacitação em tec
 
 ### Pré-requisitos
 - Navegador moderno (Chrome, Firefox, Edge ou Safari)
-- Git instalado (opcional para clonar o repositório)
-
-### Passo a passo
+- Git instalado ( clonar o repositório)
 
 1. **Clone o repositório** (ou baixe os arquivos):
    ```bash
-   git clone https://github.com/seu-usuario/trilhas-inova.git
-   ```
+   git clone https:https://github.com/klessioo/DESAFIO-03-TRILHAS.git
 
-2. **Acesse a pasta do projeto**:
-   ```bash
-   cd trilhas-inova
-   ```
-
-3. **Abra o projeto**:
-   - Método 1: Dê duplo clique no arquivo `index.html`
-   - Método 2: Execute um servidor local (recomendado):
-     ```bash
-     python -m http.server 8000
-     ```
-     Depois acesse: `http://localhost:8000`
-
-4. **Explore as páginas**:
-   - Formulário de cadastro: `index.html`
-   - Página de login: `pagLogin.html`
 
 ## 💻 Tecnologias utilizadas
 
